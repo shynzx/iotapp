@@ -21,10 +21,29 @@ const Mensajeria: React.FC = () => {
 			};
 
 			setMensajes((mensajito) => {
-				return [...mensajito.slice(1), nuevoMensaje];
+				return [...mensajito, nuevoMensaje];
 			});
 		}, 5000);
 	}, []);
+
+	const enviarMensaje = (event: React.FormEvent) => {
+		event.preventDefault();
+		if (mensajeNuevo.trim()) {
+			const hora = new Date().toLocaleString();
+			const nuevoMensaje: Mensaje = {
+				id: Date.now(),
+				texto: `Nuevo mensaje ${hora}`,
+				remitente: "Anonymous",
+				hora: hora,
+			};
+
+			setMensajes((mensajito) => {
+				return [...mensajito, nuevoMensaje];
+			});
+			setMensajeNuevo("");
+		}
+	};
+
 	return (
 		<>
 			<h1>Mensaje</h1>
@@ -33,6 +52,16 @@ const Mensajeria: React.FC = () => {
 					{mensaje.remitente}: {mensaje.texto}
 				</p>
 			))}
+			<h2>Enviar mensaje</h2>
+			<form onSubmit={enviarMensaje}>
+				<input
+					type="text"
+					value={mensajeNuevo}
+					onChange={(e) => setMensajeNuevo(e.target.value)} // Corrección aquí
+					placeholder="Escribe algo"
+				/>
+				<button type="submit">Enviar</button>
+			</form>
 		</>
 	);
 };
