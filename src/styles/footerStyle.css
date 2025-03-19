@@ -1,0 +1,21 @@
+/* Estilos para el Footer */
+.footer {
+  
+    background-color: #1E1E24;  
+        /* Fondo oscuro para contraste */
+    padding: 1rem 0;
+    color: #fff;                 /* Texto blanco */
+    text-align: center;
+    border-top: 1px solid #ccc;  /* Línea superior sutil */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.875rem;         /* Texto ligeramente pequeño */
+}

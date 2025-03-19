@@ -1,5 +1,10 @@
+@import url(../src/styles/navbarStyle.css);
+@import url(../src/styles/footerStyle.css);
+
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

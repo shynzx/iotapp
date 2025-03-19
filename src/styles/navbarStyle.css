@@ -1,0 +1,50 @@
+/* Estilos generales para el Navbar */
+.navbar {
+    background-color:  #1E1E24;
+    padding: 1rem;
+    color: #fff;
+    border-bottom: 1px solid #454242; /* Línea gris en la parte inferior */
+    padding-bottom: 0.5rem; /* Opcional: para dar espacio entre el contenido y la línea */
+  }
+  
+  /* Contenedor para centrar el contenido y espaciar elementos */
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Estilo para el título */
+  .navbar-title {
+    font-size: 1.5rem;
+  }
+  
+  /* Lista del menú */
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cada ítem del menú */
+  .navbar-item {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Efecto hover para ítems */
+  .navbar-item:hover {
+    color: #ff9900;
+  }
+  
+  /* Estilo para el ícono de usuario: pequeño y blanco */
+  .navbar-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Convierte la imagen a blanco */
+  }
+  

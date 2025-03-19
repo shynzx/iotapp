@@ -1,0 +1,79 @@
+/* Layout general */
+.dashboard-layout {
+  display: flex;
+  height: 100%; /* Ocupa toda la altura del viewport */
+}
+
+/* Contenedor del contenido principal (mapa y clima) */
+.dashboard-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Siderbar Styles */
+.siderbar {
+  width: 250px;
+  background-color: #1E1E24;
+  color: #ecf0f1;
+  padding: 1rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.siderbar-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #555555;
+  padding-bottom: 1rem;
+}
+
+.siderbar-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.siderbar-content {
+  flex: 1;
+}
+
+.siderbar-nav {
+  margin-top: 2rem;
+}
+
+.siderbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.siderbar-item {
+  margin: 0.5rem 0;
+}
+
+.siderbar-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.siderbar-item a:hover {
+  background-color: #34495e;
+}
+
+
+.navbar-usuario{
+  display: flex;
+  justify-content: right;
+  margin-bottom: 1rem;
+}
+
+.navbar-icon {
+  padding-right: 2rem;
+  
+}
