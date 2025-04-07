@@ -1,12 +1,15 @@
 /* Estilos para el Footer */
 .footer {
   
-    background-color: #1E1E24;  
+    background: rgb(30,30,36);
+    background: linear-gradient(0deg,rgba(17,17,20,1) 100%,  rgb(0, 0, 0) 100%);
         /* Fondo oscuro para contraste */
     padding: 1rem 0;
-    color: #fff;                 /* Texto blanco */
+    
+    color: #fff;
+  border-top: 1px solid rgba(85, 85, 85, 0.4);/* Texto blanco */
     text-align: center;
-    border-top: 1px solid #ccc;  /* Línea superior sutil */
+   /* Línea superior sutil */
 }
 
 .footer-container {
@@ -19,3 +22,27 @@
     margin: 0;
     font-size: 0.875rem;         /* Texto ligeramente pequeño */
 }
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #d1d5db; /* gris clarito */
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #3b82f6; /* azul Tailwind */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* azul suave */
+  }
+  

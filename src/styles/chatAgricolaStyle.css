@@ -1,0 +1,240 @@
+/* chatAgricolaStyle.css */
+
+
+.hola{
+  flex: 1;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+}
+.chat-container{
+  
+}
+/* Chat Box */
+.chat-box {
+  flex: 1;
+  display: flex;
+  height: 40rem;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #111114;
+  color: #ecf0f1;
+  gap: 1rem;
+}
+
+/* Encabezado */
+.chat-header h2 {
+  font-size: 1.5rem;
+  color: #cb8fff;
+  margin: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.chat-subtitle {
+  font-size: 0.95rem;
+  color: #bbbbbb;
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+}
+
+/* Mensajes */
+.mensaje {
+  display: flex;
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.mensaje.usuario {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.mensaje.asistente {
+  align-self: flex-start;
+}
+
+.mensaje-contenido {
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.mensaje.usuario .mensaje-contenido {
+  background-color: #7e22ce;
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+.mensaje.asistente .mensaje-contenido {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  border-top-left-radius: 4px;
+}
+
+/* Estado vacío */
+.chat-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: auto 0;
+}
+
+.chat-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.chat-empty-state h3 {
+  font-size: 1.25rem;
+  color: #cb8fff;
+  margin-bottom: 0.5rem;
+}
+
+.chat-empty-state p {
+  color: #bbbbbb;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+}
+
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.chat-suggestions button {
+  background-color: rgba(136, 5, 251, 0.152);
+  color: #ad7ad9;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-suggestions button:hover {
+  background-color: rgba(126, 34, 206, 0.25);
+}
+
+/* Input */
+.input-container {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: #141419;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-container input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  background-color: #1a1a1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container input:focus {
+  border-color: #7e22ce;
+  box-shadow: 0 0 0 2px rgba(126, 34, 206, 0.3);
+}
+
+.input-container button {
+  margin-left: 1rem;
+  padding: 0.75rem;
+  width: 45px;
+  height: 45px;
+  background-color: #7e22ce;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container button:hover {
+  background-color: #9333ea;
+}
+
+.input-container button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.7;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+.btn-borrar {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-borrar:hover {
+  background: #d9363e;
+}
+
+.botonborrar{
+  padding-left: 1rem;
+}

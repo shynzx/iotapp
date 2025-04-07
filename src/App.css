@@ -1,5 +1,6 @@
 @import url(../src/styles/navbarStyle.css);
 @import url(../src/styles/footerStyle.css);
+@import url(../src/styles/login.css);
 
 
 .App {
@@ -19,7 +20,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,3 +41,5 @@
     transform: rotate(360deg);
   }
 }
+
+

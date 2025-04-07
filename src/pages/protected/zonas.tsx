@@ -3,10 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
 import '../../styles/dashboardStyle.css'; 
 import Swal from "sweetalert2";
-import { MapComponent } from '../../hooks/parcelas';  
-import Temperatura from '../../components/temperatura';
+import { MapComponent } from '../../hooks/zonasMapa';  
+import { ZonasSinFuncionamiento } from "../../components/ZonasSinFuncionamiento";
+import { ZonasPorEstadoPieChart } from "../../components/ZonasPorEstadoPieChart";
 
-export default function Dashboard() {
+
+
+
+export default function ZonasMapas() { 
   const navigate = useNavigate();
   const [lastUpdate, setLastUpdate] = useState<string | null>(null);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -35,7 +39,6 @@ export default function Dashboard() {
 
       const contentType = response.headers.get("content-type");
 
-      // 🛡️ Verificamos si la respuesta es JSON
       if (!response.ok || !contentType?.includes("application/json")) {
         throw new Error("Respuesta inválida de la API");
       }
@@ -112,7 +115,6 @@ export default function Dashboard() {
               <li className="siderbar-item"><a href="/ia">Asistente virtual</a></li>
               <li className="siderbar-item"><a href="/zonas">Zonas de riego</a></li>
               <li className="siderbar-item logout-btn">
-
                 <button onClick={handleLogout} className="logout-btn">
                   Salir
                 </button>
@@ -123,7 +125,7 @@ export default function Dashboard() {
       </aside>
 
       <div className="dashboard-content">
-        <h2>Cultivos del sur | Mapa de ubicaciones</h2>
+        <h2>Cultivos del sur | Mapa de zonas de riego</h2>
 
         <div className="update-container">
           <p>
@@ -140,12 +142,14 @@ export default function Dashboard() {
 
         <div className="mapa-container">
           <MapComponent refreshTrigger={refreshTrigger} />
-
-          <div className="clima-container">
-            <h3>Datos de sensores Globales</h3> 
-            <Temperatura refreshTrigger={refreshTrigger} />
-          </div>
         </div>
+        <div className="zonas-status-container">
+  <ZonasSinFuncionamiento />
+</div>
+<div className="graficos-zonas-container">
+  <ZonasPorEstadoPieChart />
+</div>
+
       </div>
     </div>
   );
